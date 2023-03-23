@@ -12,7 +12,7 @@ sideMenusBtn.forEach((menu)=> menu.addEventListener("click", (event)=>getNewsByS
 
 const getNews = async()=>{
     try{
-        let header = new Headers({'x-api-key':'S_YKA6DzkJ7WPaRIRTao2ZWeVE1vzhkcvUCWsfqCz94'});
+        let header = new Headers({'x-api-key':'dlTv7kM79hwwC2tspnBY9lnH2foWvFRuX52oV-Uow6s'});
         url.searchParams.set("page", page);
         let response = await fetch(url,{headers: header});
         let data = await response.json();
