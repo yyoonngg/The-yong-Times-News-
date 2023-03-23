@@ -14,6 +14,9 @@
     flex-wrap: wrap;
     margin-top: 1em;
 }
+.hide{
+    display: none;
+}
 .menus button{
     border: none;
     background-color: white;
@@ -22,6 +25,18 @@
 .menus button:hover{
     background-color: lightgrey;
     border-radius: 4px;
+}
+@media screen and (max-width:63rem) {
+    .menus{
+        display:none;
+    }
+    .hide{
+        display: inline;
+    }
+    .head-line{
+        border-bottom: 4px double grey;
+        padding:1rem;
+    }
 }
 .img-size{
     max-width: 100%;
