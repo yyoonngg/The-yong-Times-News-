@@ -12,7 +12,7 @@ sideMenusBtn.forEach((menu)=> menu.addEventListener("click", (event)=>getNewsByS
 
 const getNews = async()=>{
     try{
-        let header = new Headers({'x-api-key':'YUjw-yNWy07Z5q2O_IBgA40INg4CPsvjjQDNgEO9Bg0'});
+        let header = new Headers({'x-api-key':'S_YKA6DzkJ7WPaRIRTao2ZWeVE1vzhkcvUCWsfqCz94'});
         url.searchParams.set("page", page);
         let response = await fetch(url,{headers: header});
         let data = await response.json();
@@ -55,18 +55,18 @@ const render=()=>{
     let newsHTML = '';
     news.forEach((item)=>{
         newsHTML += `
-        <div class="row news">
-                <div class="col-lg-4">
-                    <img class="img-size" src="${item.media||"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"}"/>
-                </div>
-                <div class="col-lg-8">
-                    <h2>${item.title}</h2>
-                    <p>${item.summary==null||item.summary==""
-                    ?"내용없음":item.summary.length>200
-                    ?item.summary.substring(0,200)+"...":item.summary}</p>
-                    <div>${item.rights||"no source"} ${moment(item.published_date).fromNow()}</div>
-                </div>
-            </div>`
+        <a href="${item.link}" class="title-link"><div class="row news">
+            <div class="col-lg-4">
+                <img class="img-size" src="${item.media||"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"}"/>
+            </div>
+            <div class="col-lg-8">
+                <h2>${item.title}</h2>
+                <p>${item.summary==null||item.summary==""
+                ?"내용없음":item.summary.length>200
+                ?item.summary.substring(0,200)+"...":item.summary}</p>
+                <div>${item.rights||"no source"} ${moment(item.published_date).fromNow()}</div>
+            </div>
+        </div></a>`
     })
     document.getElementById("news-board").innerHTML = newsHTML;
 };
