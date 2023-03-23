@@ -1,74 +1,109 @@
 .head-line{
-    margin-top: 1em;
+    font-weight: 800;
+    font-size: 3em;
+    max-width: 100%;
     display: flex;
     justify-content: center;
-}.head-line svg{
-    width: 430px;
+    margin-top: 1rem;
 }
 .menus{
-    margin-top: 1em;
+    border-top: 1px solid lightgrey;
+    border-bottom: 4px double grey;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border-top: 1px solid #ebebeb;
-    border-bottom: 4px double #000;
+    margin-top: 1em;
 }
 .menus button{
     border: none;
-    background: none;
+    background-color: white;
     margin: 5px;
 }
 .menus button:hover{
-    background-color: beige;
+    background-color: lightgrey;
+    border-radius: 4px;
 }
-@media screen and (max-width:480px){
-    .menus{
-        display: none;
-    }
-}
-.news-img-size{
+.img-size{
     max-width: 100%;
     max-height: 250px;
 }
 .news{
-    border-bottom:2px solid black;
+    border-bottom: 3px solid grey;
+    padding:1em;
 }
 .side-menu{
+    width: 0;
     height: 100%;
-    width: 0px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: beige;
+    background-color: lightgrey;
     overflow-x: hidden;
-    padding-top: 60px;
     transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .side-menu-list button{
-    margin: 5px;
-    border: none;
-    background: none;
+    border:none;
+    background-color: lightgray;
+    color:white;
+    margin:5px;
     width: 120px;
 }
-.side-menu .closebtn{
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    border: none;
-    background-color: none;
+.side-menu-list button:hover{
+    color: black;
+    font-weight: 600;
 }
 .side-menu-list{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.side-menu-list button:hover{
-    background-color: beige;
-    border-radius: 3px;
+.closebtn{
+    border:none;
+    background-color: lightgray;
+    font-size: 2rem;
+}
+.closebtn:hover{
+    color:white;
+    transform: scale(1.5);
 }
 #input-area{
     display: none;
+}
+.search-input{
+    border:2px solid gray;
+    border-radius: 4px;
+    height: 35px;
+}
+.search-button{
+    background-color: white;
+    border:2px solid gray;
+    color:black;
+    height: 35px;
+    border-radius: 4px;
+}
+.search-button:hover{
+    transform: scale(1.2);
+}
+.nav-bar{
+    margin-top: 1.5em;
+}
+.nav-btn{
+    margin-right:1em;
+    font-size: 25px;
+    cursor: pointer;
+}
+.search-btn{
+    font-size: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.page-style{
+    display: flex;
+    justify-content: center;
+    margin: 2em;
 }
