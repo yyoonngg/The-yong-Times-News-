@@ -1,5 +1,5 @@
 //https://app.newscatcherapi.com/dashboard/
-// this api will be expired 50 times 
+//this api will be expired 50 times 
 let news = [];
 let url;
 let topic = '';
@@ -12,7 +12,7 @@ sideMenusBtn.forEach((menu)=> menu.addEventListener("click", (event)=>getNewsByS
 
 const getNews = async()=>{
     try{
-        let header = new Headers({'x-api-key':'dlTv7kM79hwwC2tspnBY9lnH2foWvFRuX52oV-Uow6s'});
+        let header = new Headers({'x-api-key':'mz4ShYcOU9oHRLBUeJw7ad8Gxp4Vz64XA_qpHt02omY'});
         url.searchParams.set("page", page);
         let response = await fetch(url,{headers: header});
         let data = await response.json();
